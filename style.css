@@ -288,21 +288,44 @@ footer{
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
+@media (max-width: 900px){
 
   .hero{
-    flex-direction:column;
-    text-align:center;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-text h1{
-    font-size:50px;
+    font-size: 50px;
+    white-space: normal;
+  }
+
+  .hero-text h2{
+    text-align: center;
+  }
+
+  .hero-text p{
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image{
+    justify-content: center;
   }
 
   nav ul{
-    display:none;
+    display: none;
   }
-
 }
 
 .cv-section{
@@ -1929,4 +1952,21 @@ nav a:hover{
 }
 .skills h2{
     color:#344F1F !important;
+}
+@media (max-width:768px){
+
+    .profile-tag{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+}
+
+@media (max-width: 900px){
+
+  .tools-grid-box{
+    transform: scale(0.9) translateX(-10px);
+    transform-origin: top center;
+  }
+
 }

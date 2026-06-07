@@ -1,341 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&display=swap" rel="stylesheet">  
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prima Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- COMMENT TICKER BAR -->
+  <div class="ticker-bar">
+    <div class="ticker-label">LIVE COMMENTS</div>
+    <div class="ticker-track">
+      <div class="ticker-inner" id="tickerInner">
+        <span class="ticker-item">Be the first to leave a comment on this portfolio!</span>
+        <span class="ticker-item">Be the first to leave a comment on this portfolio!</span>
+      </div>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
   <nav>
     <a href="#hero" class="logo">PORTFOLIO</a>
     <ul>
-  <li><a href="#about">About</a></li>
-  <li><a href="#experience">Experience</a></li>
-  <li><a href="#skills">Expertise</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Expertise</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  
   <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-text reveal">
       <h2>Hello, I'm</h2>
       <h1>Prima Hatta Muzaghi</h1>
-
-<p id="typing"></p>
-
+      <p id="typing"></p>
       <a href="#projects">
-  <button>Explore Portfolio</button>
-</a>
+        <button>Explore Portfolio</button>
+      </a>
     </div>
 
-<div class="hero-image reveal">
-
-  <div class="image-hover">
-    <div class="flashlight"></div>
-
-    <img
-      src="assets/primaaukerman.png"
-      alt=""
-      id="cvTrigger"
-      style="cursor:pointer;"
-    >
-  </div>
-
-  <div class="profile-tag" id="cvTrigger2">
-      <!--div class="dot"></div-->
-      <span>View My Resume & Experience</span>
-  </div>
-
-</div>
+    <div class="hero-image reveal">
+      <div class="image-hover">
+        <div class="flashlight"></div>
+        <img src="assets/primaaukerman.png" alt="" id="cvTrigger" style="cursor:pointer;">
+      </div>
+      <div class="profile-tag" id="cvTrigger2">
+        <span>View My Resume & Experience</span>
+      </div>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="about reveal">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Fresh graduate in Informatics with a focus on data analytics and creative digital work. Passionate about turning raw data into insights that are not just accurate, but communicated in a way people can actually understand and act on.
+      <br><br>
+      Experience spans end-to-end data workflows, machine learning projects, graphic design, and social media content management. This combination builds a perspective that is both analytical and creative, not just working with numbers, but thinking about how to present them in ways that matter.
+      <br><br>
+      Currently growing as a Data Analyst while continuously sharpening skills across data, design, and technology. Driven by curiosity, strong attention to detail, and a genuine desire to create work that makes a real impact.
+      <br><br>
+      Great digital work lives at the intersection of logic and creativity, and that is exactly the space worth exploring.
+    </p>
+  </section>
 
-  <h2 class="section-title">About Me</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience reveal">
+    <h2>Experience</h2>
+    <div class="skills-3box">
 
-<p>
-  Fresh graduate in Informatics with a focus on data analytics and creative digital work. Passionate about turning raw data into insights that are not just accurate, but communicated in a way people can actually understand and act on.
-  <br><br>
-  Experience spans end-to-end data workflows, machine learning projects, graphic design, and social media content management. This combination builds a perspective that is both analytical and creative, not just working with numbers, but thinking about how to present them in ways that matter.
-  <br><br>
-  Currently growing as a Data Analyst while continuously sharpening skills across data, design, and technology. Driven by curiosity, strong attention to detail, and a genuine desire to create work that makes a real impact.
-  <br><br>
-  Great digital work lives at the intersection of logic and creativity, and that is exactly the space worth exploring.
-</p>
+      <div class="glass-box">
+        <div class="box-header">
+          <img src="assets/boxedu2.svg">
+          <h3>EDUCATION</h3>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Junior High School - SMPN 5 Jambi City</h4>
+            <p>2015 - 2018</p>
+            <span>Jambi, Indonesia</span>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Senior High School - SMAN 1 Jambi City</h4>
+            <p>2018 - 2021</p>
+            <span>Jambi, Indonesia</span>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Bachelor's Degree in Informatics - Ahmad Dahlan University</h4>
+            <p>2021 - 2025</p>
+            <span>Yogyakarta, Indonesia</span>
+          </div>
+        </div>
+      </div>
 
-</section>
+      <div class="glass-box">
+        <div class="box-header">
+          <img src="assets/work.svg">
+          <h3>WORK EXPERIENCE</h3>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Data Science Basics</h4>
+            <p>PT. Mitra Talenta Grup</p>
+            <span>Feb - Jun 2024</span>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Social Media & Study Program Content Admin</h4>
+            <p>Ahmad Dahlan University</p>
+            <span>Aug 2024 - Jan 2025</span>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>Administration & Inventory Staff</h4>
+            <p>Oren Retail</p>
+            <span>Feb 2026 - Present</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="glass-box">
+        <div class="box-header">
+          <img src="assets/compu.svg">
+          <h3>TOOLS I USE</h3>
+        </div>
+        <div class="tools-grid-box">
+          <div class="tool-item"><img src="assets/figma.svg" alt="Figma"><p>Figma</p></div>
+          <div class="tool-item"><img src="assets/photoshop.svg" alt="Photoshop"><p>Photoshop</p></div>
+          <div class="tool-item"><img src="assets/illustrator.svg" alt="Illustrator"><p>Illustrator</p></div>
+          <div class="tool-item"><img src="assets/canva.svg" alt="Canva"><p>Canva</p></div>
+          <div class="tool-item"><img src="assets/vscode.svg" alt="VS Code"><p>VS Code</p></div>
+          <div class="tool-item"><img src="assets/tableau.svg" alt="Tableau"><p>Tableau</p></div>
+          <div class="tool-item"><img src="assets/googlecollab.svg" alt="Google Colab"><p>Colab</p></div>
+          <div class="tool-item"><img src="assets/postgresql.svg" alt="PostgreSQL"><p>PostgreSQL</p></div>
+        </div>
+      </div>
 
-<section id="experience" class="experience reveal">
-  <h2>Experience</h2>
-
-  <div class="skills-3box">
-
-<div class="glass-box">
-
-  <div class="box-header">
-    <img src="assets/boxedu2.svg">
-    <h3>EDUCATION</h3>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Junior High School - SMPN 5 Jambi City</h4>
-      <p>2015 - 2018</p>
-      <span>Jambi, Indonesia</span>
     </div>
+  </section>
 
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Senior High School - SMAN 1 Jambi City</h4>
-      <p>2018 - 2021</p>
-      <span>Jambi, Indonesia</span>
+  <!-- SKILLS -->
+  <section id="skills" class="skills reveal">
+    <h2 class="section-title">Expertise</h2>
+    <div class="skills-cloud">
+      <span>Database Management</span>
+      <span>Machine Learning</span>
+      <span>Data Analyst</span>
+      <span>Web Development</span>
+      <span>Graphic Design</span>
+      <span>UI/UX</span>
+      <span>Content Marketing</span>
+      <span>Data Visualization</span>
+      <span>Visual Communication</span>
+      <span>Problem Solving</span>
+      <span>Social Media Strategy</span>
     </div>
-
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Bachelor’s Degree in Informatics - Ahmad Dahlan University</h4>
-      <p>2021 - 2025</p>
-      <span>Yogyakarta, Indonesia</span>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="glass-box">
-
-  <div class="box-header">
-    <img src="assets/work.svg">
-    <h3>WORK EXPERIENCE</h3>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Data Science Basics</h4>
-      <p>PT. Mitra Talenta Grup</p>
-      <span>Feb - Jun 2024</span>
-    </div>
-
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Social Media & Study Program Content Admin</h4>
-      <p>Ahmad Dahlan University</p>
-      <span>Aug 2024 - Jan 2025</span>
-    </div>
-
-    <div class="timeline-item">
-      <div class="dot"></div>
-      <h4>Administration & Inventory Staff</h4>
-      <p>Oren Retail</p>
-      <span>Feb 2026 - Present</span>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="glass-box">
-
-  <div class="box-header">
-    <img src="assets/compu.svg">
-    <h3>TOOLS I USE</h3>
-  </div>
-
-
-<div class="tools-grid-box">
-
-  <div class="tool-item">
-    <img src="assets/figma.svg" alt="Figma">
-    <p>Figma</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/photoshop.svg" alt="Photoshop">
-    <p>Photoshop</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/illustrator.svg" alt="Illustrator">
-    <p>Illustrator</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/canva.svg" alt="Canva">
-    <p>Canva</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/vscode.svg" alt="VS Code">
-    <p>VS Code</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/tableau.svg" alt="Tableau">
-    <p>Tableau</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/googlecollab.svg" alt="Google Colab">
-    <p>Colab</p>
-  </div>
-
-  <div class="tool-item">
-    <img src="assets/postgresql.svg" alt="PostgreSQL">
-    <p>PostgreSQL</p>
-  </div>
-
-</div>
-
-
-  </div>
-
-</div>
-
-</section>
-
-<section id="skills" class="skills reveal">
-
-  <h2 class="section-title">Expertise</h2>
-
-  <div class="skills-cloud">
-
-    <span>Database Management</span>
-    <span>Machine Learning</span>
-    <span>Data Analyst</span>
-    <span>Web Development</span>
-
-    <span>Graphic Design</span>
-    <span>UI/UX</span>
-    <span>Content Marketing</span>
-
-    <span>Data Visualization</span>
-    <span>Visual Communication</span>
-    <span>Problem Solving</span>
-
-    <span>Social Media Strategy</span>
-    
-
-  </div>
-
-</section>
+  </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
-
     <div class="project-container">
-
-<a href="design-projects.html" class="project-card-link">
-  <div class="project-card reveal">
-    <img src="assets/personaljims.jpg">
-
-    <div class="project-info">
-      <h3>Personal Design</h3>
-
-      <p>
-        Personal poster and visual design showcase.
-      </p>
-    </div>
-  </div>
-</a>
-
+      <a href="design-projects.html" class="project-card-link">
+        <div class="project-card reveal">
+          <img src="assets/personaljims.jpg">
+          <div class="project-info">
+            <h3>Personal Design</h3>
+            <p>Personal poster and visual design showcase.</p>
+          </div>
+        </div>
+      </a>
       <a href="data-projects.html" class="project-card-link">
-  <div class="project-card reveal">
-    <img src="assets/mljims.jpg">
-
-    <div class="project-info">
-      <h3>Data Science</h3>
-
-      <p>
-        Machine Learning & Analytics.
-      </p>
-    </div>
-  </div>
-</a>
-
+        <div class="project-card reveal">
+          <img src="assets/mljims.jpg">
+          <div class="project-info">
+            <h3>Data Science</h3>
+            <p>Machine Learning & Analytics.</p>
+          </div>
+        </div>
+      </a>
       <a href="creative-digital.html" class="project-card-link">
-  <div class="project-card reveal">
-    <img src="assets/sosmed.jpg">
-
-    <div class="project-info">
-      <h3>Creative Digital Project</h3>
-
-      <p>
-        Instagram feed and branding design project.
-      </p>
+        <div class="project-card reveal">
+          <img src="assets/sosmed.jpg">
+          <div class="project-info">
+            <h3>Creative Digital Project</h3>
+            <p>Instagram feed and branding design project.</p>
+          </div>
+        </div>
+      </a>
     </div>
-  </div>
-</a>
-
   </section>
 
   <!-- CONTACT -->
-<section id="contact" class="contact reveal">
-  <h2 class="section-title">Contact</h2>
+  <section id="contact" class="contact reveal">
+    <h2 class="section-title">Contact</h2>
 
-  <div class="contact-icons">
+    <div class="contact-icons">
+      <a href="mailto:prima150715@gmail.com" target="_blank" class="contact-item">
+        <img src="assets/gmail.svg">
+        <span>Email</span>
+      </a>
+      <a href="https://instagram.com/primazgs" target="_blank" class="contact-item">
+        <img src="assets/instagram.svg">
+        <span>Instagram</span>
+      </a>
+      <a href="https://linkedin.com/in/primahatta" target="_blank" class="contact-item">
+        <img src="assets/linkedin.svg">
+        <span>LinkedIn</span>
+      </a>
+    </div>
 
-    <a href="mailto:prima150715@gmail.com" target="_blank" class="contact-item">
-      <img src="assets/gmail.svg">
-      <span>Email</span>
-    </a>
+    <!-- COMMENT FORM -->
+    <div class="comment-section reveal">
+      <h3 class="comment-section-title">Leave a Comment</h3>
+      <p class="comment-section-sub">Your comment will appear live on the ticker above.</p>
 
-    <a href="https://instagram.com/primazgs" target="_blank" class="contact-item">
-      <img src="assets/instagram.svg">
-      <span>Instagram</span>
-    </a>
+      <div class="comment-form">
+        <div class="comment-form-row">
+          <input type="text" id="commentName" placeholder="Your name" maxlength="50">
+          <input type="text" id="commentRole" placeholder="Role / Company (optional)" maxlength="60">
+        </div>
+        <textarea id="commentMsg" placeholder="Write something about this portfolio..." maxlength="200"></textarea>
+        <div class="comment-form-footer">
+          <span class="char-count" id="charCount">0 / 200</span>
+          <button class="comment-submit-btn" id="submitBtn" onclick="submitComment()">
+            Post Comment ↗
+          </button>
+        </div>
+        <p class="comment-status" id="commentStatus"></p>
+      </div>
 
-    <a href="https://linkedin.com/in/primahatta" target="_blank" class="contact-item">
-      <img src="assets/linkedin.svg">
-      <span>LinkedIn</span>
-    </a>
-
-  </div>
-</section>
+      <div class="comment-list" id="commentList">
+        <div class="comment-loading">Loading comments...</div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Prima Portfolio</p>
   </footer>
 
-<div id="cvModal" class="cv-modal">
-
-  <div class="cv-content">
-
-    <span class="close-cv">&times;</span>
-
-    <iframe
-      src="assets/PrimaHattaMuzaghi_CV.pdf"
-      width="100%"
-      height="100%"
-    ></iframe>
-
+  <!-- CV MODAL -->
+  <div id="cvModal" class="cv-modal">
+    <div class="cv-content">
+      <span class="close-cv">&times;</span>
+      <iframe src="assets/PrimaHattaMuzaghi_CV.pdf" width="100%" height="100%"></iframe>
+    </div>
   </div>
 
-</div>
-
-<script src="script.js"></script>
+  <!-- FIREBASE -->
+  <script type="module" src="firebase-comments.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

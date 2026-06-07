@@ -24,10 +24,10 @@ nav{
     padding:24px 8%;
 
     position:fixed;
-    top:0;
+    top:38px;
     width:100%;
 
-    z-index:1000;
+    z-index:999;
 
     background:rgba(255,255,255,.82);
 
@@ -103,7 +103,7 @@ nav a:hover::after{
 
   align-items:center;
 
-  padding:120px 8%;
+  padding:160px 8% 120px;
 
   gap:80px;
 }
@@ -277,7 +277,7 @@ footer{
   margin:0;
   display:block;
 
-  padding:30px 20px;   /* <- ini yang bikin ada ruang */
+  padding:30px 20px;
 
   background:#0f172a;
   color:white;
@@ -429,7 +429,7 @@ body{
   flex-direction:column;
   align-items:flex-start;
 
-  padding:40px 8% 60px; /* INI KUNCI UTAMA */
+  padding:40px 8% 60px;
   gap:10px;
 }
 .about h2{
@@ -626,10 +626,11 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:25px 8%;
+
   position:fixed;
   width:100%;
-  top:0;
-  z-index:1000;
+  top:38px;
+  z-index:999;
 
   background:rgba(255,255,255,0.75);
 
@@ -1196,7 +1197,7 @@ nav a:hover{
     0 0 10px rgba(56,189,248,.15);
   }
 
-} /* <- TAMBAH INI */
+}
 
 .cv-modal{
     position:fixed;
@@ -1452,8 +1453,8 @@ nav a:hover{
   content: "";
   position: absolute;
   left: 10px;
-  top: 10px;          /* penting: jangan dari 0 */
-  bottom: 10px;       /* ini yang bikin stop di bawah */
+  top: 10px;
+  bottom: 10px;
   width: 2px;
   background: rgba(192,192,192,0.35);
 }
@@ -1513,7 +1514,7 @@ nav a:hover{
   align-items: center;
   justify-content: center;
 
-  gap: 6px; /* kecil biar gak makan space */
+  gap: 6px;
 }
 .tool-item img {
   width: 70px;
@@ -1533,7 +1534,7 @@ nav a:hover{
 .tool-item p {
   margin: 0;
 
-  font-size: 14px; /* kecil */
+  font-size: 14px;
   font-weight: 500;
 
   color: #0f172a;
@@ -1544,8 +1545,6 @@ nav a:hover{
 .tool-item {
   text-align: center;
 }
-
-
 
 .ml-body{
   background: linear-gradient(135deg, #F2EAD3, #FFF7E6);
@@ -1583,7 +1582,7 @@ nav a:hover{
   font-size:18px;
   line-height:1.9;
 
-  max-width:900px; /* ini kunci biar lebar */
+  max-width:900px;
   text-align:justify;
 
   color:#6b7280;
@@ -1758,7 +1757,6 @@ nav a:hover{
   font-weight: 900;
   margin-bottom: 20px;
 
-  /* sama vibe gradient kayak box project */
   background: linear-gradient(
     90deg,
     #F2EAD3,
@@ -1969,4 +1967,265 @@ nav a:hover{
     transform-origin: top center;
   }
 
+}
+
+/* =============================================
+   TICKER BAR + COMMENT SECTION
+   ============================================= */
+
+.ticker-bar {
+  display: flex;
+  align-items: center;
+  background: #0f172a;
+  color: #f0f0f0;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  height: 38px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid #F9F5F0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.ticker-label {
+  flex-shrink: 0;
+  background: #F4991A;
+  color: #f0f0f0;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+}
+
+.ticker-track {
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker-bar:hover .ticker-inner {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 40px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.ticker-name {
+  color: #F4991A;
+  font-weight: 700;
+}
+
+.ticker-sep {
+  color: #4a6080;
+  margin: 0 2px;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.comment-section {
+  margin-top: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-section-sub {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 24px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.comment-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #0f172a;
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 90px;
+  margin-bottom: 12px;
+}
+
+.comment-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #888;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-submit-btn {
+  background: #0f172a;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.comment-submit-btn:hover  { opacity: 0.85; }
+.comment-submit-btn:active { transform: scale(0.97); }
+.comment-submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.comment-status {
+  font-size: 13px;
+  margin-top: 10px;
+  min-height: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.comment-status--success { color: #4caf50; }
+.comment-status--error   { color: #f44336; }
+.comment-status--info    { color: #888; }
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.comment-loading,
+.comment-empty {
+  text-align: center;
+  padding: 32px;
+  color: #888;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  transition: border-color 0.2s;
+}
+
+.comment-card:hover {
+  border-color: #0f172a;
+}
+
+.comment-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+  flex-shrink: 0;
+}
+
+.comment-author {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-role {
+  font-weight: 400;
+  color: #888;
+  font-size: 13px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #777;
+  margin: 2px 0 6px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.comment-text {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .comment-form-row {
+    grid-template-columns: 1fr;
+  }
 }

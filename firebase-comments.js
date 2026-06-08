@@ -99,8 +99,8 @@ window.submitComment = async function () {
   const role = roleEl.value.trim();
   const msg  = msgEl.value.trim();
 
-  if (!name) { showStatus('⚠️ Please enter your name.', 'error'); return; }
-  if (!msg)  { showStatus('⚠️ Please write something.', 'error'); return; }
+  if (!name) { showStatus(' Please enter your name.', 'error'); return; }
+  if (!msg)  { showStatus(' Please write something.', 'error'); return; }
 
   btn.disabled = true;
   showStatus('Posting...', 'info');
@@ -111,9 +111,9 @@ window.submitComment = async function () {
     roleEl.value = '';
     msgEl.value  = '';
     updateCharCount();
-    showStatus('✅ Comment posted! It\'s now live on the ticker.', 'success');
+    showStatus(' Comment posted! It\'s now live on the ticker.', 'success');
   } catch (err) {
-    showStatus('❌ Failed to post. Check your connection.', 'error');
+    showStatus(' Failed to post. Check your connection.', 'error');
     console.error(err);
   }
 

@@ -7,8 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,13 +27,18 @@
   <!-- NAVBAR -->
   <nav>
     <a href="#hero" class="logo">PORTFOLIO</a>
-    <ul>
+    <ul id="navMenu">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Expertise</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -237,7 +241,7 @@
         <div class="comment-form-footer">
           <span class="char-count" id="charCount">0 / 200</span>
           <button class="comment-submit-btn" id="submitBtn" onclick="submitComment()">
-            Post Comment ↗
+            Submit
           </button>
         </div>
         <p class="comment-status" id="commentStatus"></p>

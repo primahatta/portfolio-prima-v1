@@ -1600,64 +1600,15 @@ footer {
 
 .flower-wrapper {
   position: relative;
-  width: 410px;
-  height: 410px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.flower-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  transform-origin: 50% 50%;
-  will-change: transform;
-}
-
-@keyframes flowerSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-.flower-wrapper:hover .flower-svg {
-  animation: flowerSpin 6s linear infinite;
-}
-
-/* Circular photo on top of SVG flower */
 .flower-wrapper .image-hover {
   position: relative;
-  width: 255px;
-  height: 255px;
-  border-radius: 50%;
-  overflow: hidden;
   z-index: 2;
-  flex-shrink: 0;
-  border: 4px solid #fff;
-  box-shadow:
-    0 0 0 2.5px #1a1a1a,
-    0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.flower-wrapper .image-hover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 0;
-  display: block;
-  opacity: 0;
-  animation: fadePhoto 1.2s ease forwards;
-  animation-delay: 0.7s;
-  transition: filter 0.3s ease;
-}
-
-.flower-wrapper .image-hover:hover img {
-  filter: brightness(0.72);
 }
 
 /* Profile tag below the flower */
@@ -1674,17 +1625,6 @@ footer {
 @keyframes floatTagFlower {
   0%, 100% { transform: translate(-50%, 0); }
   50%       { transform: translate(-50%, -5px); }
-}
-
-@media (max-width: 900px) {
-  .flower-wrapper {
-    width: 300px;
-    height: 300px;
-  }
-  .flower-wrapper .image-hover {
-    width: 188px;
-    height: 188px;
-  }
 }
 
 /* HAMBURGER BUTTON */

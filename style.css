@@ -1,12 +1,9 @@
 /* =============================================
-   FONT IMPORT — Anton (headings) + Helvetica Neue (body)
+   FONT — Helvetica Neue LT Std (headings, bold) + Helvetica Neue (body)
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-/* Helvetica Neue via system stack — premium fallback chain */
 :root {
-  --font-heading: 'Anton', 'Arial Narrow', Arial, sans-serif;
+  --font-heading: 'Helvetica Neue LT Std', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -235,7 +232,7 @@ nav a:hover::after {
 .hero-text h1 {
   font-family: var(--font-heading);
   font-size: 78px;
-  font-weight: 400; /* Anton is inherently bold */
+  font-weight: 700;
   line-height: 0.95;
   letter-spacing: 1px;
   color: #344F1F;
@@ -311,7 +308,7 @@ section {
 section h2 {
   font-family: var(--font-heading);
   font-size: 52px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 50px;
   line-height: 1;
@@ -320,7 +317,7 @@ section h2 {
 .section-title {
   font-family: var(--font-heading);
   font-size: 52px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
@@ -439,7 +436,7 @@ section h2 {
 .box-header h3 {
   font-family: var(--font-heading);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -656,7 +653,7 @@ section h2 {
 .project-info h3 {
   font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.5px;
   color: #0f172a;
   margin-bottom: 8px;
@@ -745,7 +742,7 @@ section h2 {
 .comment-section-title {
   font-family: var(--font-heading);
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
 }
@@ -1198,7 +1195,7 @@ footer {
 .cd-page h1 {
   font-family: var(--font-heading);
   font-size: 80px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 20px;
   line-height: 1;
@@ -1289,7 +1286,7 @@ footer {
 .ml-page h1 {
   font-family: var(--font-heading);
   font-size: 80px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 20px;
   line-height: 1;
@@ -1343,7 +1340,7 @@ footer {
 .ml-card h3 {
   font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   color: #111827;
@@ -1379,7 +1376,7 @@ footer {
 .ml-text h2 {
   font-family: var(--font-heading);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 10px;
   color: white;
@@ -1468,7 +1465,7 @@ footer {
 .cd-info h3 {
   font-family: var(--font-heading);
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
@@ -1597,20 +1594,96 @@ footer {
 #contact {
   scroll-margin-top: 100px;
 }
-.profile-tag {
+/* =============================================
+   FLOWER FRAME — HERO IMAGE
+   ============================================= */
+
+.flower-wrapper {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flower-svg {
   position: absolute;
-  bottom: -35px;
-  left: 67%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+@keyframes flowerSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.flower-wrapper:hover .flower-svg {
+  animation: flowerSpin 6s linear infinite;
+}
+
+/* Circular photo on top of SVG flower */
+.flower-wrapper .image-hover {
+  position: relative;
+  width: 255px;
+  height: 255px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  flex-shrink: 0;
+  border: 4px solid #fff;
+  box-shadow:
+    0 0 0 2.5px #1a1a1a,
+    0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.flower-wrapper .image-hover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  display: block;
+  opacity: 0;
+  animation: fadePhoto 1.2s ease forwards;
+  animation-delay: 0.7s;
+  transition: filter 0.3s ease;
+}
+
+.flower-wrapper .image-hover:hover img {
+  filter: brightness(0.72);
+}
+
+/* Profile tag below the flower */
+.flower-wrapper > .profile-tag {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
   transform: translateX(-50%);
   width: max-content;
+  z-index: 3;
+  animation: floatTagFlower 4s ease-in-out infinite;
 }
-.profile-tag {
-  left: 67%;
+
+@keyframes floatTagFlower {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%       { transform: translate(-50%, -5px); }
 }
 
 @media (max-width: 900px) {
-  .profile-tag {
-    left: 49.5%;
+  .flower-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .flower-wrapper .image-hover {
+    width: 188px;
+    height: 188px;
   }
 }
 

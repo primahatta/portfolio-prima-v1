@@ -1663,6 +1663,59 @@ footer {
   }
 }
 
+/* SKILLS CLOUD — TABLET & MOBILE (organic overlapping cloud, like desktop) */
+@media (max-width: 900px) {
+  .skills-cloud {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    margin: 50px auto 0;
+    transform: none;
+    overflow: visible;
+  }
+
+  .skills-cloud span {
+    position: absolute;
+    padding: 12px 20px;
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+
+  .skills-cloud span:nth-child(1)  { top: 0px;   left: 0%;   transform: rotate(-8deg); }
+  .skills-cloud span:nth-child(2)  { top: 40px;  left: 32%;  transform: rotate(6deg); }
+  .skills-cloud span:nth-child(3)  { top: 5px;   left: 60%;  transform: rotate(-6deg); }
+  .skills-cloud span:nth-child(4)  { top: 90px;  left: 38%;  transform: rotate(7deg); }
+  .skills-cloud span:nth-child(5)  { top: 130px; left: 4%;   transform: rotate(-5deg); }
+  .skills-cloud span:nth-child(6)  { top: 145px; left: 58%;  transform: rotate(8deg); }
+  .skills-cloud span:nth-child(7)  { top: 185px; left: 0%;   transform: rotate(5deg); }
+  .skills-cloud span:nth-child(8)  { top: 220px; left: 36%;  transform: rotate(-6deg); }
+  .skills-cloud span:nth-child(9)  { top: 265px; left: 0%;   transform: rotate(4deg); }
+  .skills-cloud span:nth-child(10) { top: 300px; left: 42%;  transform: rotate(-5deg); }
+  .skills-cloud span:nth-child(11) { top: 345px; left: 4%;   transform: rotate(6deg); }
+}
+
+@media (max-width: 600px) {
+  .skills-cloud span {
+    padding: 9px 15px;
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 900px) {
+  #skills {
+    padding-bottom: 30px;
+  }
+
+  .skills-cloud {
+    height: 370px;
+  }
+
+  .projects {
+    padding-top: 50px;
+  }
+}
+
 @media (max-width: 600px) {
   .comment-form-row {
     grid-template-columns: 1fr;

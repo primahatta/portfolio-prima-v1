@@ -1036,6 +1036,95 @@ section h2 {
   background: white;
 }
 
+.cv-mobile-card {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .cv-content {
+    width: 92%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 22px;
+    padding: 50px 28px 36px;
+  }
+
+  .close-cv {
+    top: 16px;
+    right: 16px;
+  }
+
+  .cv-iframe {
+    display: none;
+  }
+
+  .cv-mobile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 10px 0 4px;
+  }
+
+  .cv-mobile-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #fdf3e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .cv-mobile-card h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+  }
+
+  .cv-mobile-card p {
+    font-size: 14px;
+    color: #556;
+    max-width: 260px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  .cv-mobile-btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 12px;
+    transition: 0.25s ease;
+
+    background: #F4991A;
+    color: #fff;
+    border: 1px solid #F4991A;
+  }
+
+  .cv-mobile-btn:active {
+    transform: scale(0.97);
+  }
+
+  .cv-mobile-btn-outline {
+    background: transparent;
+    color: #0f172a;
+    border: 1px solid rgba(15, 23, 42, 0.2);
+  }
+}
+
 /* =============================================
    HERO IMAGE EFFECTS
    ============================================= */
